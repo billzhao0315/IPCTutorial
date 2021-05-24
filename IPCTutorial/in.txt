@@ -1,0 +1,12 @@
+/*Creating a Child Process with Redirected Input and Output
+The example in this topic demonstrates how to create a child process 
+using the CreateProcess function from a console process. 
+It also demonstrates a technique for using anonymous pipes to redirect 
+the child process's standard input and output handles. 
+Note that named pipes can also be used to redirect process I/O.
+  PipServer                     PipClient
+g_hChildStd_IN_Wr			g_hChildStd_IN_Rd/STD_INPUT_HANDLE 
+		 |-----------------------> 
+			  anonymous pipe     
+	     <-----------------------|       
+g_hChildStd_OUT_Rd			g_hChildStd_OUT_Wr/STD_OUTPUT_HANDLE*/
